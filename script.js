@@ -25,3 +25,18 @@ function playRound(playerSelection,computerSelection) {
     return result+` You selected ${playerSelection} and CPU selected ${computerSelection}!`;
 
 }
+
+function game() {
+    let userChoice;
+    let userScore=0;
+    let cpuScore=0;
+
+    for (let i=0;i<5;i++) {
+        userChoice = prompt("Make your choice: ");
+        let result=playRound(userChoice,getComputerChoice());
+        console.log(result);
+        if (result[4] === "l") cpuScore  +=1;
+        if (result[4] === "w") userScore +=1;
+    }
+    console.log("CPU: "+cpuScore+", User: "+userScore);
+}
