@@ -19,8 +19,13 @@ function playRound(playerSelection,computerSelection) {
         (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "SCISSORS")) {
             result= "You lost!";
         }
-    else {
+    else if((playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "ROCK") ||
+        (playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "SCISSORS") ||
+        (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "PAPER")) {
             result= "You won!";
+        }
+    else {
+            result= "That was an invalid selection.";
     }
     return result+` You selected ${playerSelection} and CPU selected ${computerSelection}!`;
 
