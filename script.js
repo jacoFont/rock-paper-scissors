@@ -44,4 +44,6 @@ function game() {
         if (result[4] === "w") {userScore +=1;}
     }
     console.log("CPU: "+cpuScore+", User: "+userScore);
+    userScore===5 ? console.log("You won the game!") : console.log("You lost the game!");
+
 }
