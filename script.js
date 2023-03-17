@@ -37,13 +37,14 @@ function game() {
     let cpuScore=0;
 
     while (userScore!=5 && cpuScore!=5) {
-        userChoice = prompt("Make your choice: ");
+        userChoice = prompt("Rock, paper or scissors! Make your choice: ");
         let result=playRound(userChoice,getComputerChoice());
         console.log(result);
         if (result[4] === "l") {cpuScore  +=1;}
         if (result[4] === "w") {userScore +=1;}
+        console.log("CPU: "+cpuScore+", User: "+userScore);
+
     }
-    console.log("CPU: "+cpuScore+", User: "+userScore);
     userScore===5 ? console.log("You won the game!") : console.log("You lost the game!");
 
 }
